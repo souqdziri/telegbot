@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # إعدادات البوت
 BOT_TOKEN = "7698107127:AAG5qvvWG8BMOJHBmXDOlf3Dd6FPk7f_WC0"
-CHAT_ID = "1833623637"  # هذا هو Chat ID الخاص بك
+CHAT_ID = "1833632637"  # صححت الرقم
 
 @app.route('/', methods=['POST'])
 def webhook():
@@ -15,7 +15,7 @@ def webhook():
 
     message = "📦 حدث جديد:\n\n" + str(data)
 
-    url = f"https://api.telegram.org/bot{7698107127:AAG5qvvWG8BMOJHBmXDOlf3Dd6FPk7f_WC0}/sendMessage"
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     payload = {'chat_id': CHAT_ID, 'text': message}
     requests.post(url, data=payload)
 
